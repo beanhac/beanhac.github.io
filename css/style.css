@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+body {
+    background: rgb(35,35,35);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;   
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #371c4d 0%, #5b2e80 28.53%, #9349cc 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+	margin-left: 25px;
+}
+
+.hero-status {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -15% 0 0 -25%;
+    background: transparent;
+}
+
+.hero-status p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#date {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.updated {
+    color: rgb(0, 255, 0);
+    font-weight: 600;
+}
+.updated:after {
+    content: "Undetected";
+}
+
+.updating {
+    color: rgb(255, 125, 55);
+    font-weight: 600;
+}
+.updating:after {
+    content: "Updating";
+}
+
+.detected {
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+}
+.detected:after {
+    content: "Detected";
+}
+
+.hero-img img {
+    width: 700px;
+    height: auto;
+    transition: all .55s ease;
+    transform-style: preserve-3d;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #aa55eb;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    margin: 4px;
+    line-height: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.showcase {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.showcase i {
+    margin-right: 5px;
+}
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1460px) {
+    section {
+        padding: 0px 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+    
+    .hero-img img {
+        width: 560px;
+        height: auto;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 150px;
+        height: 42vh;
+        background: #9349cc;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        border-radius: 12px 0 0 12px;
+    }
+
+    .navlist a {
+        display: flex;
+        
+        margin: 10px 0;
+        margin-left: 0;
+        margin-bottom: 50%;
+    }
+
+    .navlist.open {
+        right: 0;
+    }
+
+    .hero-status {
+        width: 90%;
+        height: 48%;
+        margin: -50% 0 0 -45%;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+}
